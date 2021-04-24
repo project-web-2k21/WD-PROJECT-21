@@ -5,7 +5,7 @@
   
   Team members: Alikhan Tortay, Daniil Kaimekin, Alisher Kaparov
   
-  Project Name: "Caffee"
+  Project Name: "Test cafe"
   
   Project Description: Our site allows users to order various meals
 
