@@ -1,0 +1,38 @@
+<head>
+  <title>Test Cafe</title>
+</head>
+<body>
+<header class="header-control">
+  <div class="control-align">
+    <div class="img-settings">
+      <img src="https://lh3.googleusercontent.com/proxy/FRjIiV06IDbhMkAvquqIT1rm2RUhY4Ws_jPpRDufw0Z1iSC9X-Sq87uUvhlu4s4D0eCAdyGb1gu6hGj8zK4qhQix-JW5FOhooC1QcVHOgYufKosXDQKpIFnPdpDKg6A2" a="this is the logo"/>
+    </div>
+    <nav class="navigation">
+      <ul>
+        <li class="active"><a href="#"> Testcafe </a>
+         </li>
+        <li class="active"><a routerLink="/menu">Menu</a><i class="fa fa-angle-down"></i>
+          <div class="sub-menu" ><ul *ngFor="let menuItem of menu"><li><a href="menu/{{menuItem.id}}/dishes">{{menuItem.name}}</a></li>
+          </ul></div> </li>
+        <li ><a routerLink="/order">Orders</a></li>
+      </ul>
+      <div class="ss" *ngIf="!logged">
+        <table style="padding-top:10px">
+          <tr style="padding:10px">
+            <td><a routerLink="login/" class="signin">Sign in</a></td>
+            <td><a class="btn" routerLink="register/">Register</a> </td>
+            </tr>
+        </table>
+      </div>
+      <div class="ss" *ngIf="logged">
+        <table style="padding-top:10px">
+          <tr style="padding:10px">
+            <td><a class="signin">Hello, {{ name }} ! </a></td>
+            <td><a (click)="logout()"  class="signin">Log out</a></td>
+            </tr>
+        </table>
+      </div>
+    </nav>
+  </div>
+
+</header>
